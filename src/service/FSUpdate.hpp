@@ -35,12 +35,13 @@ void UpdateFS()
                 if (size)
                 {
                     uint8_t c = stream->readBytes(buff, ((size > sizeof(buff)) ? sizeof(buff) : size));
-                    Update.write(buff, c);
-                    my_Struct.currentLength += c;
-                    Serial.print('.');
-                    if (my_Struct.currentLength != my_Struct.totalLength)
-                        return;
-                    Update.end(true);
+                    Serial.write(buff,c);
+                    // Update.write(buff, c);
+                    // my_Struct.currentLength += c;
+                    // Serial.print('.');
+                    // if (my_Struct.currentLength != my_Struct.totalLength)
+                    //     return;
+                    // Update.end(true);
                     Serial.printf("\nUpdate Success, Total Size: %u", my_Struct.currentLength);
                     if (my_Struct.len > 0)
                     {
@@ -83,12 +84,13 @@ void UpdateFirm()
                 if (size)
                 {
                     uint8_t c = stream->readBytes(buff, ((size > sizeof(buff)) ? sizeof(buff) : size));
-                    Update.write(buff, c);
-                    my_Struct.currentLength += c;
-                    Serial.print('.');
-                    if (my_Struct.currentLength != my_Struct.totalLength)
-                        return;
-                    Update.end(true);
+                    Serial.write(buff,c);
+                    // Update.write(buff, c);
+                    // my_Struct.currentLength += c;
+                    // Serial.print('.');
+                    // if (my_Struct.currentLength != my_Struct.totalLength)
+                    //     return;
+                    // Update.end(true);
                     Serial.printf("\nUpdate Success, Total Size: %u", my_Struct.currentLength);
                     if (my_Struct.len > 0)
                     {
@@ -106,5 +108,5 @@ void UpdateFirm()
         Serial.printf("[HTTP] GET... failed, error: %s\n", http.errorToString(my_Struct.httpCode).c_str());
     }
     http.end();
-    ESP.restart();
+    // ESP.restart();
 }
