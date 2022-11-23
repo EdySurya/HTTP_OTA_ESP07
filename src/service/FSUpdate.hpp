@@ -3,8 +3,8 @@
 #include <Updater.h>
 #include <config/mainStruct.hpp>
 
-const char *urlFS = "https://raw.githubusercontent.com/EdySurya/HTTP_OTA_ESP/LittleFS/src/Update/littlefs.bin";
-const char *urlFirm = "https://raw.githubusercontent.com/EdySurya/HTTP_OTA_ESP/LittleFS/src/Update/firmware.bin";
+const char *urlFS = "https://raw.githubusercontent.com/EdySurya/HTTP_OTA_ESP07/littleFS/src/Update/littlefs.bin";
+const char *urlFirm = "https://raw.githubusercontent.com/EdySurya/HTTP_OTA_ESP07/littleFS/src/Update/firmware.bin";
 FS_Struct my_Struct;
 WiFiClient Client;
 void UpdateFS()

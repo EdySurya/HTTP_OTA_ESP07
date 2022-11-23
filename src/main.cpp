@@ -3,7 +3,7 @@
 
 const char *ssid = "Signature Smart Hotel";
 const char *password = "smarthotelbali";
-const char *urlJson = "https://raw.githubusercontent.com/EdySurya/HTTP_OTA_ESP/LittleFS/data/CurrentVersion.json";
+const char *urlJson = "https://raw.githubusercontent.com/EdySurya/HTTP_OTA_ESP07/littleFS/data/CurrentVersion.json";
 
 void initLittleFS()
 {
