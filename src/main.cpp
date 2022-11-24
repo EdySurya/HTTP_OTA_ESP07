@@ -61,7 +61,7 @@ void loop()
     Serial.print("[HTTP] begin...\n");
     // configure server and url
     http.useHTTP10(true);
-    http.begin(Client,urlJson);
+    http.begin(urlFS,fingerprint);
     // start connection and send HTTP header
     my_Struct.httpCode = http.GET();
     if (my_Struct.httpCode > 0)
